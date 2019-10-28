@@ -1,6 +1,6 @@
+<!-- collaborated with Alice Huth, Noelle Enkema, Dominique Roitman and Flannery O'Donnell -->
 <!DOCTYPE html>
 <html lang="en">
-	<!-- collaborated with Alice Huth and Noelle Enkema  -->
 <head>
 	<!-- Note: This file was originally named audio_begin.html.  So if you notice something
 	different in the example video don't be alarmed.-->
@@ -92,24 +92,20 @@
 	} 
 
 	function mute() { 
-		// console.log("Mute Video")
 
-		// console.log("unmute")
+	
 		if (vid.muted ===  true) {
 			document.querySelector('#mute').innerHTML = 'Mute'; 
 			vid.muted = false;
 			console.log("Unmute")
 		}
-		// console.log("unmute")
 
-		// console.log("mute")
 		else {
 			document.querySelector('#mute').innerHTML = 'Unmute'; 
 			vid.muted = true; 
 			console.log("Mute"); 
 		}
 
-		// console.log("mute")
 		// If the video is currently muted: 
 		// 		log "unmute" to the console
 		// 		unmute the video
@@ -123,7 +119,6 @@
 
 	volumeSlider.oninput = function() {
 		vid.volume = this.value / 100; 
-		// console.log ("Volume is " + vid.volume); 
 		// Change the volume (0 is off, 100 is full volume, everything else is proportionally in between)
 
 		// Make sure to update the volume element.
@@ -134,18 +129,14 @@
 		var output = document.getElementById("volume");
 
 		output.innerHTML = this.value + "%"; 
-		// slider.oninput = function() {
-  		// output.innerHTML = this.value + 
+
 		console.log ("Volume is " + output.innerHTML)
-		// }
-		// console.log ("Volume is " ); 
+
 		// How can i get this to get the percents and why i can't get it to log changing the volume each time. 
 	}
 	       
 
 	function gray() { 
-		// console.log("In grayscale")
-		// filter: grayscale(); 
 		var element = document.getElementById("gray()");
    		vid.classList.add("grayscale");
 		console.log("In grayscale"); 
@@ -156,8 +147,6 @@
 	function color() {
 		console.log("In color"); 
 		vid.classList.remove("grayscale"); 
-		// var vid = document.getElementById("gray()");
-   		// vid.classList.toggle("color()");
 		// Remove the existing grayscale class.
 
 	}
